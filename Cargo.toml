@@ -11,3 +11,17 @@ pinocchio-token = "0.4.0"
 
 [lib]
 crate-type = ["lib", "cdylib"]
+
+
+[dev-dependencies]
+solana-sdk = "2.2.1"
+mollusk-svm = "0.4.0"
+mollusk-svm-bencher = "0.4.0"
+
+[features]
+no-entrypoint = []
+std = []
+test-default = ["no-entrypoint", "std"]
+
+[[test]]
+name = "flash_loan"
